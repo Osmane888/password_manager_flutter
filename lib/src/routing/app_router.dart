@@ -7,6 +7,7 @@ final goRouter = GoRouter(
       debugLogDiagnostics: true,
       routes: [
         GoRoute(path: '/', builder: (context, state) => LoginScreen()),
+        // Faire des sous-routes à /home quand la page des détails des mdp sera faite
         GoRoute(path: '/home', builder: (context, state) => HomeScreen())
       ],
       );
