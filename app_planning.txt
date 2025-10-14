@@ -1,0 +1,9 @@
+------------------ Features ------------------
+
+- Système pour se connecter sur un compte existant
+- Système pour créer un compte
+- Affichage de la liste des mots de passe et leurs informations lié au compte connecté
+- Possibilité d'enregistrer un nouveau mot de passe avec des informations tels que le service, l'adresse email et autres infos qui lui est lié
+- Les mots de passe et leurs infos doivent être cryptés en base de données
+- Après la connexion une clé unique doit être entrée comme système supplémentaire de sécurité qui permettra de décrypter les mots de passe listé
+- Chaque mdp enregistré le sera au travers d'un formulaire avec ses infos liés (email, service, notes supplémentaires)
