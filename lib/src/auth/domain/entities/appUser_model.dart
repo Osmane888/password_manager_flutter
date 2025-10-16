@@ -1,22 +1,22 @@
-class AppUser {
+class AppuserModel {
   
   final String uid;
   final String email;
   final String displayName;
 
-  AppUser({
+  AppuserModel({
     required this.uid, 
     required this.email, 
     required this.displayName
     });
 
   
-  AppUser copyWith(
+  AppuserModel copyWith(
     String? uid,
     String? email,
     String? displayName
   ) {
-    return AppUser(
+    return AppuserModel(
       uid: uid ?? this.uid,
       email: email ?? this.email,
       displayName: displayName ?? this.displayName
