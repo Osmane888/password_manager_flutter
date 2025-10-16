@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:go_router/go_router.dart';
-import 'package:password_manager/src/screens/home_screen.dart';
-import 'package:password_manager/src/auth/login_screen.dart';
+import 'package:password_manager/src/home/presentation/screens/home_screen.dart';
+import 'package:password_manager/src/auth/presentation/screens/login_screen.dart';
 
 enum AppRoute{
   home,

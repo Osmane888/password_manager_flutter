@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:password_manager/src/auth/domain/entities/password_model.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -17,12 +18,12 @@ class _LoginScreenState extends State<LoginScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
-  void _submitForm() {
+  void _submitForm() async {
     if(_formKey.currentState!.validate()){
-      final email = _emailController;
-      final password = _passwordController;
+      final email = _emailController.text.trim();
+      final password = _passwordController.text;
 
-      FirebaseAuth.instance.signInWithEmailAndPassword(email: email.toString(), password: password.toString());
+      final userCreds = await FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password);
     }
   }
 
@@ -46,6 +47,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 }
               },
             ),
+            SizedBox(
+              height: 10
+            ),
             TextFormField(
               controller: _passwordController,
               keyboardType: TextInputType.emailAddress,
@@ -56,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   return null;
                 }
               },
-            )
+            ),
           ],
         )
         )
