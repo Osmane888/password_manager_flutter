@@ -30,7 +30,6 @@ class AppeUserModel {
       'email' : email,
       'displayName' : displayName
     };
-
   }
 
   factory AppeUserModel.fromMap(Map<String, String> map) {
