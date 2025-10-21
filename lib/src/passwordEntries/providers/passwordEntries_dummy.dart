@@ -1,64 +1,47 @@
-import 'package:password_manager/src/auth/domain/entities/passwordEntry_model.dart';
 
-final List <PasswordEntryModel> passwordEntries = [
-  PasswordEntryModel(
+import 'package:password_manager/src/passwordEntries/domain/entities/passwordEntry_model.dart';
+
+final List <PasswordEntry> passwordEntries = [
+  PasswordEntry(
     uid: '1',
-    password: 'spotify@1234',
-    serviceName: 'Spotify',
-    linkedEmail: 'user.music@example.com',
+    userUid: 'user_001',
+    serviceName: 'Gmail',
+    linkedEmail: 'osmane@gmail.com',
+    password: 'p@ssword123',
   ),
-  PasswordEntryModel(
+  PasswordEntry(
     uid: '2',
-    password: 'netflix!2024',
-    serviceName: 'Netflix',
-    linkedEmail: 'moviebuff@example.com',
-  ),
-  PasswordEntryModel(
-    uid: '3',
-    password: 'G00glePwd!',
-    serviceName: 'Google',
-    linkedEmail: 'myaccount@gmail.com',
-  ),
-  PasswordEntryModel(
-    uid: '4',
-    password: 'DiscordSecure#99',
-    serviceName: 'Discord',
-    linkedEmail: 'chatlover@example.com',
-  ),
-  PasswordEntryModel(
-    uid: '5',
-    password: 'twitch_streamer_88',
-    serviceName: 'Twitch',
-    linkedEmail: 'gamer88@example.com',
-  ),
-  PasswordEntryModel(
-    uid: '6',
-    password: 'AmazonOrder@567',
-    serviceName: 'Amazon',
-    linkedEmail: 'shopper@example.com',
-  ),
-  PasswordEntryModel(
-    uid: '7',
-    password: 'Xdev_2025!',
+    userUid: 'user_001',
     serviceName: 'GitHub',
-    linkedEmail: 'dev@example.com',
+    linkedEmail: 'osmane.dev@gmail.com',
+    password: 'g!thub2024',
   ),
-  PasswordEntryModel(
-    uid: '8',
-    password: 'FBfriends#92',
+  PasswordEntry(
+    uid: '3',
+    userUid: 'user_001',
+    serviceName: 'Netflix',
+    linkedEmail: 'osmane@stream.com',
+    password: 'n3tflix!cool',
+  ),
+  PasswordEntry(
+    uid: '4',
+    userUid: 'user_002',
     serviceName: 'Facebook',
-    linkedEmail: 'oldmail@example.com',
+    linkedEmail: 'testuser@fb.com',
+    password: 'Fb_2025pass',
   ),
-  PasswordEntryModel(
-    uid: '9',
-    password: 'UberPass22',
-    serviceName: 'Uber',
-    linkedEmail: 'user.rides@example.com',
+  PasswordEntry(
+    uid: '5',
+    userUid: 'user_002',
+    serviceName: 'Twitter',
+    linkedEmail: 'testuser@x.com',
+    password: 'X_birdy!',
   ),
-  PasswordEntryModel(
-    uid: '10',
-    password: 'Airbnb_Stay!11',
-    serviceName: 'Airbnb',
-    linkedEmail: 'traveller@example.com',
+  PasswordEntry(
+    uid: '6',
+    userUid: 'user_003',
+    serviceName: 'Amazon',
+    linkedEmail: 'client.amazon@mail.com',
+    password: 'Am@zonPrime#123',
   ),
 ];

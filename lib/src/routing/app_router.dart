@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:go_router/go_router.dart';
-import 'package:password_manager/src/passwordEntries/presentation/screens/home_screen.dart';
+import 'package:password_manager/src/passwordEntries/presentation/screens/passwordEntries_list.dart';
 import 'package:password_manager/src/auth/presentation/screens/login_screen.dart';
 
 enum AppRoute{
@@ -10,12 +10,13 @@ enum AppRoute{
   passwordDetails,
 }
 
+bool isLoggedIn = false;
+
 final goRouter = GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       redirect: (context, state) {
-        final isLoggedIn = true;
-        //final isLoggedIn = FirebaseAuth.instance.currentUser != null;
+        // final isLoggedIn = FirebaseAuth.instance.currentUser != null;
         // final isLoggedIn = AppUser(arguments pour construire l'objet de test de connexion);
         if(isLoggedIn) {
           if(state.uri.path == '/login'){
@@ -33,7 +34,7 @@ final goRouter = GoRouter(
         GoRoute(
           path: '/', 
           name: AppRoute.home.name,
-          builder: (context, state) => HomeScreen(),
+          builder: (context, state) => PasswordentriesList(),
           routes: [],
           ),
         GoRoute(
@@ -43,3 +44,7 @@ final goRouter = GoRouter(
         ),
       ],
       );
+
+void isLoggedInSwitch () {
+  isLoggedIn = !isLoggedIn;
+}

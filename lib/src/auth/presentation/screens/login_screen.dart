@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:password_manager/src/routing/app_router.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -60,6 +61,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 }
               },
             ),
+            ElevatedButton(
+              onPressed: isLoggedInSwitch, 
+              child: Text('Enter Home')
+              )
           ],
         )
         )

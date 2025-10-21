@@ -1,28 +1,32 @@
-class PasswordEntryModel {
+class PasswordEntry {
   
   final String uid;
   final String password;
   final String serviceName;
   final String linkedEmail;
+  final String userUid;
 
-  PasswordEntryModel({
+  PasswordEntry({
     required this.uid,
     required this.password,
     required this.serviceName,
     required this.linkedEmail,
+    required this.userUid,
   });
 
 
-  PasswordEntryModel copyWith ({
+  PasswordEntry copyWith ({
     String? uid,
     String? password,
     String? serviceName,
-    String? linkedEmail
-  }) {  return PasswordEntryModel(
+    String? linkedEmail,
+    String? userUid,
+  }) {  return PasswordEntry(
           uid : uid ?? this.uid,
           password : password ?? this.password,
           serviceName : serviceName ?? this.serviceName,
-          linkedEmail : linkedEmail ?? this.linkedEmail
+          linkedEmail : linkedEmail ?? this.linkedEmail,
+          userUid : userUid ?? this.userUid
         );
   }
 
@@ -31,16 +35,18 @@ class PasswordEntryModel {
       'uid' : uid,
       'password' : password,
       'serviceName' : serviceName,
-      'linkedEmail' : linkedEmail
+      'linkedEmail' : linkedEmail,
+      'userUid' : userUid
     };
   }
 
-  factory PasswordEntryModel.fromMap (Map<String, String> map) {
-    return PasswordEntryModel(
+  factory PasswordEntry.fromMap (Map<String, String> map) {
+    return PasswordEntry(
       uid : map['uid'] ?? '',
       password : map['password'] ?? '',
       serviceName : map['serviceName'] ?? '',
-      linkedEmail: map['linkedEmail'] ?? ''
+      linkedEmail: map['linkedEmail'] ?? '',
+      userUid: map['userUid'] ?? '',
     );
   }
 }
