@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:password_manager/src/passwordEntries/domain/repositories/fake_passwordEntries_repositories.dart';
 
-class PasswordentriesList extends StatelessWidget {
+class PasswordentriesList extends ConsumerWidget {
   const PasswordentriesList({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
 
-    final listPasswordEntries = FakePasswordentriesRepositories().getPasswordEntries();
+    final passwordEntriesRepository = ref.watch(passwordEntriesRepositoryProvider);
+    final listPasswordEntries = passwordEntriesRepository.getPasswordEntries();
 
     return Scaffold(
       body: ListView.builder(
