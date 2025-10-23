@@ -1,4 +1,3 @@
-
 import 'package:password_manager/src/passwordEntries/domain/entities/passwordEntry_model.dart';
 
 final List <PasswordEntry> passwordEntries = [

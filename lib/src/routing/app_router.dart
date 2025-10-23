@@ -10,7 +10,7 @@ enum AppRoute{
   passwordDetails,
 }
 
-bool isLoggedIn = false;
+bool isLoggedIn = true;
 
 final goRouter = GoRouter(
       initialLocation: '/',
